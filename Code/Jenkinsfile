@@ -4,7 +4,8 @@ pipeline {
     environment {
         BUILD_SERVER_IP = '172.31.21.81'
     }
-       stages {
+
+    stages {
         stage('Cleanup and Clone Repository') {
             steps {
                 script {
@@ -14,7 +15,6 @@ pipeline {
             }
         }
 
-     stages {
         stage('Build Docker images on Build Server') {
             steps {
                 script {
