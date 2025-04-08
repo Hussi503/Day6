@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Remove existing Day6 directory and clone the latest repo
-                    sh "ssh ubuntu@${BUILD_SERVER_IP} 'sudo rm -rf /home/ubuntu/Day6 && git clone https://github.com/sagarkakkalasworld/Day6.git /home/ubuntu/Day6'"
+                    sh "ssh ubuntu@${BUILD_SERVER_IP} 'sudo rm -rf /home/ubuntu/Day6 && git clone https://github.com/Hussi503/Day6.git /home/ubuntu/Day6'"
                 }
             }
         }
