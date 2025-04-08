@@ -5,16 +5,8 @@ pipeline {
         BUILD_SERVER_IP = '172.31.21.81'
     }
 
-    stages {
-        // stage('Cleanup and Clone Repository') {
-        //     steps {
-        //         script {
-        //             // Remove existing Day6 directory and clone the latest repo
-        //             sh "ssh ubuntu@${BUILD_SERVER_IP} 'sudo rm -rf /home/ubuntu/Day6 && git clone https://github.com/Hussi503/Day6.git /home/ubuntu/Day6'"
-        //         }
-        //     }
-        }
 
+     stages {
         stage('Build Docker images on Build Server') {
             steps {
                 script {
