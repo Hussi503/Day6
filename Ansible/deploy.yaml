@@ -13,7 +13,7 @@
 
    - name: clone bash scripts repo into server
      ansible.builtin.shell:
-       cmd: sudo git clone https://github.com/sagarkakkalasworld/Day5.git
+       cmd: sudo git clone https://github.com/Hussi503/Day6.git
        chdir: bashscripts/
 
    - name: giving ownership to build.sh and giving excecuting permissions to deploy.sh
