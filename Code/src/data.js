@@ -2,9 +2,9 @@ export const sliderItems = [
   {
     id: "1",
     img: "assets/braclet/main.jfif",
-    title: "Build and Deployment has been successfull using Jenkins",
+    title: "Build and Deployment has been successfull using Jenkins -Day-6",
     desc: "This is now in new commit",
-    bg: "green",
+    bg: "blue",
   },
   {
     id: "2",
