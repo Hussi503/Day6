@@ -19,9 +19,12 @@
    - name: giving ownership to build.sh and giving excecuting permissions to build.sh
      ansible.builtin.shell:
        cmd: sudo chown ubuntu build.sh && sudo chmod 744 build.sh
-       chdir: /home/ubuntu/bashscripts/react-nginx_bashscripts
+       chdir: /home/ubuntu/bashscripts/Day6/Bash
+       #chdir: /home/ubuntu/bashscripts/react-nginx_bashscripts
 
    - name: running script to make build
      ansible.builtin.shell: 
        cmd: ./build.sh
-       chdir: /home/ubuntu/bashscripts/react-nginx_bashscripts
+       chdir: /home/ubuntu/bashscripts/Day6/Bash
+      #chdir: /home/ubuntu/bashscripts/react-nginx_bashscripts
+      
