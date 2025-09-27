@@ -10,22 +10,23 @@
 # sudo docker push hussi503/sagar-k-practice:latest
 
 
-#!/bin/bash
-set -e  # exit immediately on error
+##!/bin/bash
+set -e  # exit on error
 
-# Optional: Clean up only the images you care about
+# Clean up specific images, ignore if not present
 sudo docker rmi -f hussi503/sagar-k-practice:latest || true
 sudo docker rmi -f react-microk8s:latest || true
 
-# Navigate to code directory (assuming Jenkins already cloned Day6)
-cd /var/lib/jenkins/workspace/react-demo/Code
+# Move into repo code directory (adjust path to match Ansible clone location)
+cd /home/jenkins/bashscripts/Day6/Code
 
 # Build the Docker image
 sudo docker build -t react-microk8s -f golddockerfile .
 
-# Tag the image correctly
+# Tag correctly
 sudo docker tag react-microk8s:latest hussi503/sagar-k-practice:latest
 
-# Push to Docker Hub (make sure `docker login` has been run)
+# Push to Docker Hub
 sudo docker push hussi503/sagar-k-practice:latest
+
 
