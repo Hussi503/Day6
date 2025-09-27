@@ -1,12 +1,12 @@
 ---
 - name: Playbook to build our docker image
   hosts: localhost
-  tasks:  
+  tasks:
    - name: remove existing bashscripts directory and ignore task if bashscripts folder is not there
      ansible.builtin.shell:
        cmd: sudo rm -r bashscripts
-     ignore_errors: yes    
-       
+     ignore_errors: yes
+     
    - name: create new bashscripts directory
      ansible.builtin.shell:
        cmd: sudo mkdir bashscripts         
@@ -20,11 +20,10 @@
      ansible.builtin.shell:
        cmd: sudo chown ubuntu build.sh && sudo chmod 744 build.sh
        chdir: /home/ubuntu/bashscripts/Day6/Bash
-       #chdir: /home/ubuntu/bashscripts/react-nginx_bashscripts
 
    - name: running script to make build
      ansible.builtin.shell: 
        cmd: ./build.sh
        chdir: /home/ubuntu/bashscripts/Day6/Bash
-      #chdir: /home/ubuntu/bashscripts/react-nginx_bashscripts
+     
       
